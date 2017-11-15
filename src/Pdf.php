@@ -10,15 +10,18 @@ class Pdf extends \mikehaertl\wkhtmlto\Pdf
         parent::__construct($options);
     }
 
-    public function response()
+    public function response($filename=null)
     {
         if (!$content = $this->toString())
         {
             throw new \Exception($this->getError());
         }
 
-        $response = \Response::make($content);
-        $response->header('Content-Type','application/pdf');
-        return $response;
+        if(!$filename)
+        {
+            $filename = 'file';
+        }
+
+        return response($content)->header('Content-Type','application/pdf')->header('Content-Disposition','inline; filename="'.$filename.'.pdf"');
     }
 }
