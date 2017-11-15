@@ -36,6 +36,12 @@ use Basdegroot\PhpwkhtmltopdfLaravel\Pdf;
 
 $pdf = new Pdf('http://www.google.nl');
 return $pdf->response();
+
+// or with a filename
+
+return $pdf->response('filename'); 
+
+
 ```
 
 The Pdf object extends \mikehaertl\wkhtmlto\Pdf so all the other methods are still available.
