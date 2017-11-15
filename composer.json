@@ -2,6 +2,7 @@
     "name": "basdegroot/phpwkhtmltopdflaravel",
     "description": "Wrapper for the phpwkhtmltopdf package",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Bas de Groot",
@@ -11,5 +12,11 @@
     "require": {
         "mikehaertl/phpwkhtmltopdf": "^2.2"
     },
-    "license": "MIT"
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4" : {
+            "Basdegroot\\PhpwkhtmltopdfLaravel\\" : "src/"
+        }
+    }
 }
