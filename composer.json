@@ -1,0 +1,15 @@
+{
+    "name": "basdegroot/phpwkhtmltopdflaravel",
+    "description": "Wrapper for the phpwkhtmltopdf package",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bas de Groot",
+            "email": "basdegroot@gmail.com"
+        }
+    ],
+    "require": {
+        "mikehaertl/phpwkhtmltopdf": "^2.2"
+    },
+    "license": "MIT"
+}
